@@ -42,16 +42,27 @@
 # print('App Completed ')
 
 # Part Two Elif and try/except block(try Catch Black)
-x = 6
-main = input("I need a number please ?")
-try:
-     number = int(main)
-except :
-     number = -1
+# x = 6
+# main = input("I need a number please ?")
+# try:
+#      number = int(main)
+# except :
+#      number = -1
 
-if number > 0:
-     print(number , "Great!!!")
-elif number < 0 :
-    print(number , "A negative number, okay !!")
-else : 
-     print(number , "IS NOT A NUMBER")     
+# if number > 0:
+#      print(number , "Great!!!")
+# elif number < 0 :
+#     print(number , "A negative number, okay !!")
+# else : 
+#      print(number , "IS NOT A NUMBER")     
+
+
+hrs = input("Enter Hours: ")
+rate = input("Rate Please")
+nHours = float(hrs)
+nRate = float(rate)
+if nHours < 40 :
+     nRate = 1.5
+elif nHours >= 40:
+     nRate = 10.50     
+print (nRate * nHours)  
