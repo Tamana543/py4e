@@ -58,15 +58,34 @@
 
 #Asignment three 
 
-hrs = input("Enter Hours: ")
-rate = input("Rate Please")
-nHours = float(hrs)
-nRate = float(rate)
-if nHours > 40 :
-     firstPay = 40 * nRate
-     upperTimePay = (nHours - 40 ) * (nRate * 1.5)
-     mainPay = firstPay + upperTimePay
-else:
-     mainPay = nHours * nRate    
-print (nRate * nHours)  
+# hrs = input("Enter Hours: ")
+# rate = input("Rate Please")
+# nHours = float(hrs)
+# nRate = float(rate)
+# if nHours > 40 :
+#      firstPay = 40 * nRate
+#      upperTimePay = (nHours - 40 ) * (nRate * 1.5)
+#      mainPay = firstPay + upperTimePay
+# else:
+#      mainPay = nHours * nRate    
+# print (nRate * nHours)  
+
+#assignment four
+score = input("Enter Score: ")
+scoreNum = float(score)
+if scoreNum > 0.0 or scoreNum < 1.0 :
+          if scoreNum >= 0.9:
+               print("A")
+          elif scoreNum >= 0.8 : 
+               print("B")
+          elif scoreNum>= 0.7 :
+               print("C")
+          elif scoreNum>= 0.6 :
+               print("D")
+          elif scoreNum < 0.6 :
+               print("F")
+else :
+     print("Please Enter between 0.0 and 1.0")
+     quit()
+
 
