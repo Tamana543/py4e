@@ -73,7 +73,7 @@
 #assignment four
 score = input("Enter Score: ")
 scoreNum = float(score)
-if scoreNum > 0.0 or scoreNum < 1.0 :
+if scoreNum > 0.0 and scoreNum < 1.0 :
           if scoreNum >= 0.9:
                print("A")
           elif scoreNum >= 0.8 : 
@@ -86,6 +86,25 @@ if scoreNum > 0.0 or scoreNum < 1.0 :
                print("F")
 else :
      print("Please Enter between 0.0 and 1.0")
-     quit()
+     # quit()
+
+
+# Funnction in python 
+def test() :
+     print("I Am A Function")
+     print("Switch on main line")
+
+# test()
+print("Done")
+# test()
+
+# Float and Int
+print(float(40 / 100))
+number = 45
+print(type(number))
+decimaled = float(number)
+print(decimaled)
+print(type(decimaled))
+print(1 + 4 * (4 /8 )+ float(number))
 
 
