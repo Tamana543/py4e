@@ -71,21 +71,21 @@
 # print (nRate * nHours)  
 
 #assignment four
-score = input("Enter Score: ")
-scoreNum = float(score)
-if scoreNum > 0.0 and scoreNum < 1.0 :
-          if scoreNum >= 0.9:
-               print("A")
-          elif scoreNum >= 0.8 : 
-               print("B")
-          elif scoreNum>= 0.7 :
-               print("C")
-          elif scoreNum>= 0.6 :
-               print("D")
-          elif scoreNum < 0.6 :
-               print("F")
-else :
-     print("Please Enter between 0.0 and 1.0")
+# score = input("Enter Score: ")
+# scoreNum = float(score)
+# if scoreNum > 0.0 and scoreNum < 1.0 :
+#           if scoreNum >= 0.9:
+#                print("A")
+#           elif scoreNum >= 0.8 : 
+#                print("B")
+#           elif scoreNum>= 0.7 :
+#                print("C")
+#           elif scoreNum>= 0.6 :
+#                print("D")
+#           elif scoreNum < 0.6 :
+#                print("F")
+# else :
+#      print("Please Enter between 0.0 and 1.0")
      # quit()
 
 
@@ -95,16 +95,45 @@ def test() :
      print("Switch on main line")
 
 # test()
-print("Done")
+# print("Done")
 # test()
 
 # Float and Int
-print(float(40 / 100))
+# print(float(40 / 100))
 number = 45
-print(type(number))
+# print(type(number))
 decimaled = float(number)
-print(decimaled)
-print(type(decimaled))
-print(1 + 4 * (4 /8 )+ float(number))
+# print(decimaled)
+# print(type(decimaled))
+# print(1 + 4 * (4 /8 )+ float(number))
 
+# function
+ 
+def add(a,b):
+     if a > 0 and b > 0 :
+           return a + b
+     elif a < 0 or b < 0 :
+         return  a+b
+     else :
+         return "Give me a numberr !!"  
 
+main = add(-8,9)
+print(main)
+
+hrs = input("Enter Hours: ")
+rate = input("Rate Please")
+nHours = float(hrs)
+nRate = float(rate)
+def computepay(h, r):
+    if nHours > 40 :
+     firstPay = 40 * nRate
+     upperTimePay = (nHours - 40 ) * (nRate * 1.5)
+     mainPay = firstPay + upperTimePay
+     return mainPay
+    else:
+     mainPay = nHours * nRate  
+     return mainPay
+    
+
+p = computepay(nHours, nRate)
+print("Pay", p)
