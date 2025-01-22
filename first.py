@@ -1,3 +1,5 @@
+# Python was created by Guido van Rossum in 1989 while working at CWI in the Netherlands. Python was released as Open Source in February. 1991. The open source community grew around the world. And the first Python workshop was hosted by NIST in 1994. >> From 95 to 2000, I worked in the U.S. in Northern Virginia at CNRI.
+
 # x = 3
 # if x > 4:
 #      print("bigger")
@@ -118,22 +120,62 @@ def add(a,b):
          return "Give me a numberr !!"  
 
 main = add(-8,9)
-print(main)
+# print(main)
 
-hrs = input("Enter Hours: ")
-rate = input("Rate Please")
-nHours = float(hrs)
-nRate = float(rate)
 def computepay(h, r):
-    if nHours > 40 :
-     firstPay = 40 * nRate
-     upperTimePay = (nHours - 40 ) * (nRate * 1.5)
-     mainPay = firstPay + upperTimePay
-     return mainPay
-    else:
-     mainPay = nHours * nRate  
-     return mainPay
-    
+     hrs = input("Enter Hours: ")
+     rate = input("Rate Please")
+     nHours = float(hrs)
+     nRate = float(rate)
+     if nHours > 40 :
+          firstPay = 40 * nRate
+          upperTimePay = (nHours - 40 ) * (nRate * 1.5)
+          mainPay = firstPay + upperTimePay
+          return mainPay
+     else:
+          mainPay = nHours * nRate  
+          return mainPay
+     
 
-p = computepay(nHours, nRate)
-print("Pay", p)
+# p = computepay(nHours, nRate)
+# print("Pay", p)
+
+# LoopWorking 
+#Definite Loop 
+friends = [ "Nilo","Arezo" , "Asma"]
+for friend in friends:
+    print("Hello", friend)
+print("Done")
+
+numer = [2,34,54,7,5,90]
+largeNum = -1
+for num in numer:
+     if num > largeNum :
+       largeNum = num
+     print(largeNum)
+print("Doneee")
+
+#Indefinte loop
+x = 5
+while x > 0 :
+     print(x )
+     x = x-1
+print("Completed")
+
+x = 10
+while x > 0 :
+     print(x)
+     x = x-1
+     continue
+print("Done")
+
+# while True :
+#      line = input('>')
+#      if line[0] == '#' :
+#           continue
+#      quit()     
+#      if line == 'done':
+#           break
+#      print(line)
+# print("done")     
+
