@@ -137,3 +137,39 @@ def computepay(h, r):
 
 p = computepay(nHours, nRate)
 print("Pay", p)
+
+# Finding Largest Number
+largestNum = -1
+for num in [23,43,2,1,54,6] :
+     if num > largestNum:
+          largestNum = num
+          print("largestNum is" , num)
+print(largestNum)
+print("Done")
+
+# Finding the Everage
+count = 0
+sum = 0 
+for num in [43,5,6,5,4,3]:
+     count = count + 1
+     sum = num + sum
+print(sum / count)
+print("Done")
+
+#finding the length in a loup 
+main = 0
+for item in [45,4,8,5,7,5,4,3,5,7,8,9] :
+     main = main+1
+
+print(main)
+
+
+# smallest Number
+value = None
+for item in [43,6,5,4,77,89,54] :
+     if value is None:
+          value = item 
+     elif  item < value :
+          print(item, "Is Smallest")
+
+print("Done 3")
