@@ -217,3 +217,27 @@ for item in [43,6,5,4,77,89,54] :
 
 print("Done 3")
 
+# LAst Assignmetn 
+largest = None
+smallest = None
+
+while True:
+    userInput = input("Enter a number: ")
+
+    if userInput.lower() == 'done':
+        break
+
+    try:
+        num = int(userInput)
+        
+        # Update largest and smallest values
+        if largest is None or num > largest:
+            largest = num
+        if smallest is None or num < smallest:
+            smallest = num
+
+    except ValueError:
+        print("Invalid input")
+
+print("Maximum is", largest)
+print("Minimum is", smallest)
