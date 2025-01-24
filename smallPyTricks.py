@@ -22,4 +22,11 @@ while True:
 
 
 #### Second Trick 
-# import time, rotatescrreen as rs
+# finding IP Address
+
+# import socket
+# name = socket.gethostname()
+# IPAddress = socket.gethostbyname(name)
+
+# print(name)
+# print(IPAddress)
