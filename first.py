@@ -169,87 +169,87 @@ while x > 0 :
      continue
 print("Done")
 
-# while True :
-#      line = input('>')
-#      if line[0] == '#' :
-#           continue
-#      quit()     
-#      if line == 'done':
-#           break
-#      print(line)
-# print("done")     
-# p = computepay(nHours, nRate)
-# print("Pay", p)
+while True :
+     line = input('>')
+     if line[0] == '#' :
+          continue
+     quit()     
+     if line == 'done':
+          break
+     print(line)
+print("done")     
+p = computepay(nHours, nRate)
+print("Pay", p)
 
 # Finding Largest Number
-# largestNum = -1
-# for num in [23,43,2,1,54,6] :
-#      if num > largestNum:
-#           largestNum = num
-#           print("largestNum is" , num)
-# print(largestNum)
-# print("Done")
+largestNum = -1
+for num in [23,43,2,1,54,6] :
+     if num > largestNum:
+          largestNum = num
+          print("largestNum is" , num)
+print(largestNum)
+print("Done")
 
 # Finding the Everage
-# count = 0
-# sum = 0 
-# for num in [43,5,6,5,4,3]:
-#      count = count + 1
-#      sum = num + sum
-# print(sum / count)
-# print("Done")
+count = 0
+sum = 0 
+for num in [43,5,6,5,4,3]:
+     count = count + 1
+     sum = num + sum
+print(sum / count)
+print("Done")
 
-# #finding the length in a loup 
-# main = 0
-# for item in [45,4,8,5,7,5,4,3,5,7,8,9] :
-#      main = main+1
+#finding the length in a loup 
+main = 0
+for item in [45,4,8,5,7,5,4,3,5,7,8,9] :
+     main = main+1
 
-# print(main)
+print(main)
 
 
 # # smallest Number
-# value = None
-# for item in [43,6,5,4,77,89,54] :
-#      if value is None:
-#           value = item 
-#      elif  item < value :
-#           print(item, "Is Smallest")
+value = None
+for item in [43,6,5,4,77,89,54] :
+     if value is None:
+          value = item 
+     elif  item < value :
+          print(item, "Is Smallest")
 
-# print("Done 3")
+print("Done 3")
 
-# # LAst Assignmetn 
-# largest = None
-# smallest = None
+# LAst Assignmetn 
+largest = None
+smallest = None
 
-# while True:
-#     userInput = input("Enter a number: ")
+while True:
+    userInput = input("Enter a number: ")
 
-#     if userInput.lower() == 'done':
-#         break
+    if userInput.lower() == 'done':
+        break
 
-#     try:
-#         num = int(userInput)
+    try:
+        num = int(userInput)
         
-#         # Update largest and smallest values
-#         if largest is None or num > largest:
-#             largest = num
-#         if smallest is None or num < smallest:
-#             smallest = num
+        # Update largest and smallest values
+        if largest is None or num > largest:
+            largest = num
+        if smallest is None or num < smallest:
+            smallest = num
 
-#     except ValueError:
-#         print("Invalid input")
+    except ValueError:
+        print("Invalid input")
 
-# print("Maximum is", largest)
-# print("Minimum is", smallest)
+print("Maximum is", largest)
+print("Minimum is", smallest)
 
-# # python Data Structure First Assignment
-# text = "X-DSPAM-Confidence:    0.8475"
-# first = text.find(":")
-# test = text.find("5")
-# second = text[first + 1:test +1 ]
-# third = second.strip()
-# main = float(third)
-# print(main)
+# python Data Structure First Assignment
+text = "X-DSPAM-Confidence:    0.8475"
+first = text.find(":")
+test = text.find("5")
+second = text[first + 1:test +1 ]
+third = second.strip()
+main = float(third)
+print(main)
 
 # Practicing the string and its methods 
 
