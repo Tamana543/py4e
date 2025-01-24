@@ -241,3 +241,12 @@ while True:
 
 print("Maximum is", largest)
 print("Minimum is", smallest)
+
+# python Data Structure First Assignment
+text = "X-DSPAM-Confidence:    0.8475"
+first = text.find(":")
+test = text.find("5")
+second = text[first + 1:test +1 ]
+third = second.strip()
+main = float(third)
+print(main)
