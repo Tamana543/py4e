@@ -1,5 +1,6 @@
 import turtle
 
+
 a = 0
 b =0
 
@@ -18,7 +19,9 @@ while True:
      if b == 200:
           break
 
-# tuple.exitonclick()
+x = 1
+for x > 0 : 
+          
 
 
 #### Second Trick 
