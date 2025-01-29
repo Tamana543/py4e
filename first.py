@@ -280,3 +280,24 @@ first = data.find("T")
 second = data[first-1:]
 third = second.strip()
 print(third)
+
+print("CHeckkkkkkk Heeereeeeee")
+# Open do open an extra file and checked for its data
+data = open("notes.txt","r")
+
+# print(data)
+main = open("README.md")
+# for item in main :
+#      print("Hello")
+
+# count = 0
+# for item in main :
+#      count = count +1
+#      print(count)
+
+# print("Done ")     
+
+# read do reads the given file 
+
+second =main.read()
+print(second)

@@ -20,7 +20,7 @@ while True:
           break
 
 x = 1
-for x > 0 : 
+# for x > 0 : 
           
 
 
