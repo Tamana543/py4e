@@ -21,8 +21,7 @@ while True:
      if b == 200:
           break
 
-turtle.exitonclick()
-root.mainloop()
+
 
 #### Second Trick 
 # finding IP Address

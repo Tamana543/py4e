@@ -280,3 +280,51 @@ first = data.find("T")
 second = data[first-1:]
 third = second.strip()
 print(third)
+
+print("CHeckkkkkkk Heeereeeeee")
+# Open do open an extra file and checked for its data
+data = open("notes.txt","r")
+
+# print(data)
+main = open("README.md")
+for item in main :
+     print("Hello")
+
+count = 0
+for item in main :
+     count = count +1
+     print(count)
+
+print("Done ")     
+
+# read do reads the given file 
+
+second =main.read()
+print(second)
+
+#  Assignment 
+fname  = input("Enter file name: ")
+file = open(fname)
+second = file.read()
+main = second.upper().strip()
+print(main)
+
+# Assignment 2
+# WORRKKKKK ON HEREEEEEE 
+fname = input("Enter file name: ")
+fh = open(fname)
+count = 0
+total = 0.0
+for line in fh:
+    if line.startswith("X-DSPAM-Confidence:"):
+        count += 1  # Count valid lines
+        value = float(line.split(":")[1].strip())  # Extract floating point number
+        total += value  # Add to total
+
+if count > 0:
+    average = total / count
+    print("Average spam confidence:", average)
+else:
+    print("No valid lines found.")
+        
+
