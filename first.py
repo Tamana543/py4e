@@ -314,18 +314,17 @@ print(main)
 fname = input("Enter file name: ")
 fh = open(fname)
 count = 0
-total = 0
+total = 0.0
 for line in fh:
-     if not line.startswith("X-DSPAM-Confidence:"):
-        data = fh.read()
-        for item in data :
-            count = count+ 1
-          
-     
-     elif line.startswith("X-DSPAM-Confidence:") :
-        data = fh.read()
-        for item in data :
-            total = total + 1
+    if line.startswith("X-DSPAM-Confidence:"):
+        count += 1  # Count valid lines
+        value = float(line.split(":")[1].strip())  # Extract floating point number
+        total += value  # Add to total
+
+if count > 0:
+    average = total / count
+    print("Average spam confidence:", average)
+else:
+    print("No valid lines found.")
         
 
-print("Average spam confidence:" ,total/count)
