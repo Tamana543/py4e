@@ -1,5 +1,7 @@
 import turtle
-
+from tkinter import *
+root = Tk()
+root.attributes('-fullscreen',True)
 
 a = 0
 b =0
@@ -19,9 +21,6 @@ while True:
      if b == 200:
           break
 
-x = 1
-# for x > 0 : 
-          
 
 
 #### Second Trick 
