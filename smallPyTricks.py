@@ -49,7 +49,7 @@ def PhoneNumerLocation() :
      print("timezone : "+str(timeZone))
      geolocation = phonenumbers.geocoder.description_for_number(phonenumber ,'en')
      print("location : " +geolocation)
-     service = phonenumbers.carrier.name_for_number(number, "en")
+     service = phonenumbers.carrier.name_for_number(phonenumber, "en")
      print("server Provider : " +service)
 
-PhoneNumerLocation()
+# PhoneNumerLocation()
