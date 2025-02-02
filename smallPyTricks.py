@@ -35,10 +35,19 @@ import socket
 def IPAdressEng() :
      name = socket.gethostname()
      IPAddress = socket.gethostbyname(name)
+     return IPAddress
 
-     print(name)
-     print(IPAddress)
- 
+
+def get_domain_name(ip_address):
+    try:
+        hostname = socket.gethostbyaddr(ip_address)[0]
+        return hostname
+    except socket.herror:
+        return "No domain name found"
+
+
+domain_name = get_domain_name(IPAdressEng())
+print(f"The domain name for {IPAdressEng()} is {domain_name}") 
 import phonenumbers
 from phonenumbers import *
 
