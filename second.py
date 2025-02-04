@@ -31,5 +31,31 @@ def assignment85() :
 
 # assignment85()
 
+def Assignment94():
+     inputFile = input("Enter file:")
+     countLine = 0
+     try : 
+          data = open(inputFile)
+     except :
+          print("Give Me A File")
+          quit()
+     if len(inputFile) < 1 :
+            data = "mbox-short.txt"
+     for line in data :
+          lines = line.split()
+          dataList = dict()
+          dataList["name"] =""
+          dataList["count"] =0
+          
+          if lines[0] == "From" :
+                dataList["name"] = lines[5]
+                dataList["count"] = 1
+          if dataList["name"] in dataList :
+                dataList["count"] =+ 1
 
+     print("[email protected] ",dataList["count"])
+Assignment94()
+
+
+                
       
