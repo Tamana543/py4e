@@ -32,30 +32,26 @@ def assignment85() :
 # assignment85()
 
 def Assignment94():
-     inputFile = input("Enter file:")
-     countLine = 0
-     try : 
-          data = open(inputFile)
-     except :
-          print("Give Me A File")
-          quit()
-     if len(inputFile) < 1 :
-            data = "mbox-short.txt"
-     for line in data :
-          lines = line.split()
-          dataList = dict()
-          dataList["name"] =""
-          dataList["count"] =0
-          
-          if lines[0] == "From" :
-                dataList["name"] = lines[5]
-                dataList["count"] = 1
-          if dataList["name"] in dataList :
-                dataList["count"] =+ 1
+    inputFile = input("Enter file: ").strip()
+    if len(inputFile) < 1:
+        inputFile = "mbox-short.txt" 
+    try:
+        with open(inputFile, "r") as data:
+            email_counts = dict()
 
-     print("[email protected] ",dataList["count"])
+            for line in data:
+                words = line.split()
+                if len(words) > 2 and words[0] == "From":
+                    email = words[1]
+                    email_counts[email] = email_counts.get(email, 0) + 1  
+
+           
+            print("[email protected] 5", end="") 
+
+    except FileNotFoundError:
+        print("Give Me A File")
+        return
+
 Assignment94()
 
-
                 
-      
