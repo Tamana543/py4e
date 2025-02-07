@@ -76,3 +76,19 @@ def assignment102() :
 
 print("My Name is Tamana",end=":")
 print("Tamana Farzami")
+print("my","name","is","Tamana", sep="_")
+print("my","name","is","Tamana",sep="_",end="*")
+print("my","name","is","Taman","a" * 20,sep="",end="*\n")
+print("    !")
+print("   ! !")
+print("  !   !")
+print(" !     !")
+print("!!!   !!!")
+print("  !   !")
+print("  !   !")
+print("  !!!!!")
+# A literal is data whose values are determined by the literal itself.
+# You use literals to encode data and to put them into your code. 
+print(0x123) 
+print(0o433)
+#  these 2 arespecial in python and what ever you enter after "0x" and "0o" you will get an exact values 283 and 291
