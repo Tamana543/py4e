@@ -52,6 +52,27 @@ def Assignment94():
         print("Give Me A File")
         return
 
-Assignment94()
+# Assignment94()
 
-                
+# Assignment 10.2
+def assignment102() :
+     fileName = input("Enter File: ")
+     if len(fileName) < 1 :
+          fileName = "mbox-short.txt"
+     first = open(fileName)
+     dataList = {}
+     for line in first :
+          words = line.split()
+          if len(words) > 1 and words[0] == "From" :
+               timeMain= words[5]
+               hour = timeMain.split(":")[0]
+               dataList[hour] = dataList.get(hour,0) + 1
+
+     sortedData = sorted(dataList.items())
+     for hour,count in sortedData :
+          print(hour,count)
+
+# assignment102()
+
+print("My Name is Tamana",end=":")
+print("Tamana Farzami")
