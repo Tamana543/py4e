@@ -9,6 +9,8 @@ x	// match any instance of x
 [x]	// match any instance of x in the bracketed range - [abxyz] will match any instance of a, b, x, y, or z
 |	// an OR operator - [x|y] will match an instance of x or y
 ()	// used to group sequences of characters or matches
+(   // Indicates where string extraction is to start
+)   // Indicates where string extraction is to end
 {}	// used to define numeric quantifiers
 {x}	// match must occur exactly x times
 {x,}	// match must occur at least x times
@@ -18,7 +20,11 @@ x	// match any instance of x
 +	// find 1 or more of preceding match, same as {1,}
 ^	// match the beginning of the line
 $	// match the end of a line
-
+*?  //Repeats a character zero or more times (non-greedy)
++?  // Repeats a chracter one or more times (non-greedy)
+[aeiou] // Matches a single character in the listed set
+[^XYZ]  // Matches a single character not in the listed set
+[a-z0-9] // The set of characters can include a range
 [:alpha:]	// Represents an alphabetic character. Use [:alpha:]+ to find one of them.
 [:digit:]	// Represents a decimal digit. Use [:digit:]+ to find one of them.
 [:alnum:]	// Represents an alphanumeric character ([:alpha:] and [:digit:]).
