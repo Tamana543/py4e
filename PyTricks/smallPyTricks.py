@@ -46,19 +46,37 @@ def get_domain_name(ip_address):
         return "No domain name found"
 
 
-domain_name = get_domain_name(IPAdressEng())
-print(f"The domain name for {IPAdressEng()} is {domain_name}") 
+# domain_name = get_domain_name(IPAdressEng())
+# print(f"The domain name for {IPAdressEng()} is {domain_name}") 
 import phonenumbers
 from phonenumbers import *
-
+import opencage
+import folium
+from opencage.geocoder import OpenCageGeocode
 def PhoneNumerLocation() :
      number = input("Enter Phone Number : ")
+     data = dict()
      phonenumber= phonenumbers.parse(number)
      timeZone = phonenumbers.timezone.time_zones_for_number(phonenumber)
+     data["timezone"] = timeZone
      print("timezone : "+str(timeZone))
      geolocation = phonenumbers.geocoder.description_for_number(phonenumber ,'en')
+     data["Location"] = geolocation
      print("location : " +geolocation)
      service = phonenumbers.carrier.name_for_number(phonenumber, "en")
      print("server Provider : " +service)
+     key = '7e37e9bcde5c48819e031dcfbb882958' # imported from https://opencagedata.com/dashboard#geocoding
+     geocoder = OpenCageGeocode(key)
+     query = str(geolocation)
+     result = geocoder.geocode(query)
+     lat = result[0]['geometry']['lat']
+     lng = result[0]['geometry']['lng']
+     mapLocation = folium.Map(geolocation=[lat,lng], zoom_start=30)
+     folium.Marker([lat,lng], popup=geolocation).add_to(mapLocation)
+     mapLocation.save("Location.html")
+     print("For Main Location Open The Location From This Folder")
+     # print(lat,lng)
+     # print(data)
 
-# PhoneNumerLocation()
+PhoneNumerLocation()
+
