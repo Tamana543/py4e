@@ -77,8 +77,21 @@ def linksOuter() :
     file = input("File URL : ")
     html = urllib.request.urlopen(file,context=ctx).read()
     data = BeautifulSoup(html , 'html.parser')
-    tags = data('a')
+    tags = data('img')
     for tag in tags :
-        print(tag.get('href' ,None))
+        print(tag.get('src' ,None))
 # linksOuter()
 
+def Assignment4_3() :
+    sumNum = 0
+    file = input("File URL : ")
+    html_data = urllib.request.urlopen(file,context=ctx)
+    data = BeautifulSoup(html_data,'html.parser')
+    # tags = data("span")
+    tags = data.find_all('span')
+    for tag in tags :
+        span_data = tag.get_text()
+        span_data_Num = int(span_data)
+        sumNum += span_data_Num
+    print(sumNum)
+Assignment4_3()
