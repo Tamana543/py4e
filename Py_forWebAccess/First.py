@@ -94,4 +94,18 @@ def Assignment4_3() :
         span_data_Num = int(span_data)
         sumNum += span_data_Num
     print(sumNum)
-Assignment4_3()
+# Assignment4_3()
+
+def Assignment4_4() :
+    key_value = 0
+    dictionary = []
+    file = input("File URL : ")
+    html_data = urllib.request.urlopen(file,context=ctx)
+    data = BeautifulSoup(html_data,'html.parser')
+    tags = data.find_all("a")
+    for tag in tags :
+        a_links= tag.get("href",None)
+        dictionary.append(a_links) 
+        print(dictionary)
+Assignment4_4()
+
