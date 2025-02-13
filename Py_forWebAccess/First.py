@@ -97,15 +97,20 @@ def Assignment4_3() :
 # Assignment4_3()
 
 def Assignment4_4() :
-    key_value = 0
+   
+    position = 18 
+    count = 7
     dictionary = []
     file = input("File URL : ")
     html_data = urllib.request.urlopen(file,context=ctx)
     data = BeautifulSoup(html_data,'html.parser')
     tags = data.find_all("a")
-    for tag in tags :
-        a_links= tag.get("href",None)
-        dictionary.append(a_links) 
-        print(dictionary)
-Assignment4_4()
+    for _ in range(count): 
+        a_links= tags[position - 1].get("href",None)
+        name = a_links.split("_")[-1].split(".")[0]  
+        # dictionary.append(a_links) 
+    print("Last name in sequence:", name)
+# Assignment4_4()
+
+
 
