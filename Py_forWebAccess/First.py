@@ -112,5 +112,21 @@ def Assignment4_4() :
     print("Last name in sequence:", name)
 # Assignment4_4()
 
+#  XML in Python Practuice
+import xml.etree.ElementTree as Ex
+def XMLPractice() : 
+    data = '''
+    <person>
+    <name>Tamana Farzami</name>
+    <phone type="intl">+93 782177966 </phone>
 
+    <email hide="yes"/>
+    </person>
+    '''
+    tree = Ex.fromstring(data)
+    print("Name : ", tree.find('name').text)
+    print("phone : ",tree.find("phone").text)
+    print("Email : ", tree.find("email").get("hide"))
+
+XMLPractice()
 
