@@ -80,7 +80,7 @@ def linksOuter() :
     tags = data('img')
     for tag in tags :
         print(tag.get('src' ,None))
-# linksOuter()
+linksOuter()
 
 def Assignment4_3() :
     sumNum = 0
