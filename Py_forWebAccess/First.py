@@ -229,4 +229,45 @@ def startPract() :
         print('lat', lat, 'lon', lon)
         location = js['features'][0]['properties']['formatted']
         print(location)
-startPract()
+# startPract()
+
+# Last Assignment 
+def lastAssignment() :
+        
+
+    # Define the base URL of the API
+    base_url = "http://py4e-data.dr-chuck.net/opengeo?"
+
+    # Prompt the user for the location
+    location = input("Enter location: ")
+
+    # URL encode the location using urllib.parse.urlencode
+    params = {"q": location}
+    url = base_url + urllib.parse.urlencode(params)
+
+    # Print the URL being requested (for debugging)
+    print(f"Retrieving {url}")
+
+    # Open the URL and read the response
+    with urllib.request.urlopen(url) as response:
+        data = response.read()
+
+    # Convert the response data to a dictionary
+    data_dict = json.loads(data)
+
+    # Print how many characters were retrieved (for debugging)
+    print(f"Retrieved {len(data)} characters")
+
+    # Debug: Print the entire JSON response to see its structure
+    print("Full JSON Response:")
+    print(json.dumps(data_dict, indent=4))  # Print the full response structure
+
+    # Check for 'results' and 'plus_code' in the response
+    if "results" in data_dict and len(data_dict["results"]) > 0:
+        plus_code = data_dict["results"][0].get("plus_code", "No plus_code found")
+        print(f"Plus code {plus_code}")
+    else:
+        print("No results found or no plus_code in response.")
+
+
+lastAssignment()
