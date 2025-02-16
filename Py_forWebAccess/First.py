@@ -140,9 +140,11 @@ def assigmentExtr() :
     main_data = tree.findall('.//count')
     for item in main_data :
         # item_num = int(item)
-        item_list.append(item.text)
-        # counter += item_num
-    print(item_list)
+        item_list.append(int(item.text))
+        counter = sum(item_list)
+           
+       
+    print(counter)
 
 assigmentExtr()
 
