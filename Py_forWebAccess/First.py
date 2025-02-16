@@ -170,10 +170,12 @@ def AssignmentJSON() :
     link = input("Enter The Link : ")
     JSON_data = urllib.request.urlopen(link).read()
     main_data = json.loads(JSON_data)
-    for item in main_data :
+    data = main_data['comments']
+    for item in data :
+        count+=item["count"]
         # print(int(item['count']))
-        data = int(item['count'])
-        count += data
+        # count += data
     print(count)
+    # print(count)
     # print(main_data)
 AssignmentJSON()
