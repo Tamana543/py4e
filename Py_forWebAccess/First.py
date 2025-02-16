@@ -65,7 +65,7 @@ def web_words_counter() :
     print(counts)
 # web_words_counter()
 
-from bs4 import BeautifulSoup
+# from bs4 import BeautifulSoup
 import ssl
 # to ignore SSL certificate errors 
 
@@ -164,3 +164,16 @@ def jsonPract() :
     print(main["name"])
 # jsonPract()
 
+# Assignment 
+def AssignmentJSON() :
+    count = 0
+    link = input("Enter The Link : ")
+    JSON_data = urllib.request.urlopen(link).read()
+    main_data = json.loads(JSON_data)
+    for item in main_data :
+        # print(int(item['count']))
+        data = int(item['count'])
+        count += data
+    print(count)
+    # print(main_data)
+AssignmentJSON()
