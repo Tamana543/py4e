@@ -80,7 +80,7 @@ def linksOuter() :
     tags = data('img')
     for tag in tags :
         print(tag.get('src' ,None))
-linksOuter()
+# linksOuter()
 
 def Assignment4_3() :
     sumNum = 0
@@ -146,7 +146,21 @@ def assigmentExtr() :
        
     print(counter)
 
-assigmentExtr()
+# assigmentExtr()
 
-
+# Json in Python 
+import json
+def jsonPract() :
+    data = '''{
+   
+    "name":"Tamana Farzami",
+    "phone" : "+93782177966",
+    "email" :{"address" : "tamanafarzami33@gmail.com",
+    "hide" : "yes"
+    }
+    
+    }'''
+    main = json.loads(data)
+    print(main["name"])
+# jsonPract()
 
