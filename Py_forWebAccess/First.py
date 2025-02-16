@@ -128,5 +128,23 @@ def XMLPractice() :
     print("phone : ",tree.find("phone").text)
     print("Email : ", tree.find("email").get("hide"))
 
-XMLPractice()
+# XMLPractice()
+# Assignment ExtractingData
+def assigmentExtr() : 
+    counter = 0
+    item_list = list()
+    link = input("Enter the URL: ")
+    XML_data = urllib.request.urlopen(link)
+    data = XML_data.read()
+    tree = Ex.fromstring(data)
+    main_data = tree.findall('.//count')
+    for item in main_data :
+        # item_num = int(item)
+        item_list.append(item.text)
+        # counter += item_num
+    print(item_list)
+
+assigmentExtr()
+
+
 
