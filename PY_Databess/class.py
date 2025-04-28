@@ -7,12 +7,12 @@ class partyCounter:
      def __del__(self) : 
           print("I am Destructed",self.x)
 
-an = partyCounter()
-an.party()
-an.party()
-an = 42
-print("an contains", an)
-print("Dir", dir(an))
+# an = partyCounter()
+# an.party()
+# an.party()
+# an = 42
+# print("an contains", an)
+# print("Dir", dir(an))
 
 # Practicing inherietence 
 # main class
@@ -34,8 +34,33 @@ class FootballFan(partyAnimal):
           self.points = self.points + 7
           self.party()
           print(self.party, "Parties", self.points)
-s = partyAnimal("Sally")
-s.party()
-j = FootballFan("Jim")
-j.party()
-j.touchdown()
+# s = partyAnimal("Sally")
+# s.party()
+# j = FootballFan("Jim")
+# j.party()
+# j.touchdown()
+
+string ='''Hello
+Word
+I am 
+Multy line string'''
+print(string)
+str1 = 'a'
+str2 = 'b'
+
+print(str1 + str2)
+print(str2 + str1)
+print(5 * 'a')
+print('b' * 4)
+
+# To know the specific volue of a character in ASCII/Unicode
+# Demonstrating the ord() function.
+
+char_1 = 'a'
+char_2 = ' ' 
+
+print(ord(char_1))
+print(ord(char_2))
+
+print(chr(97))
+print(chr(945))
