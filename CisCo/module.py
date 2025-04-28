@@ -36,3 +36,49 @@ if __name__ == "__main__":
   my_list = [i+1 for i in range(5)]
   print(suml(my_list) == 15)
   print(prodl(my_list) == 120)
+
+string ='''Hello
+Word
+I am 
+Multy line string'''
+print(string)
+str1 = 'a'
+str2 = 'b'
+
+print(str1 + str2)
+print(str2 + str1)
+print(5 * 'a')
+print('b' * 4)
+
+# To know the specific volue of a character in ASCII/Unicode
+# Demonstrating the ord() function.
+
+char_1 = 'a'
+char_2 = ' ' 
+
+print(ord(char_1))
+print(ord(char_2))
+
+print(chr(97))
+print(chr(945))
+
+# Iterating through a string.
+
+the_string = 'silly walks'
+
+for character in the_string:
+    print(character, end=' ')
+
+print()
+
+# Slices
+
+alpha = "abdefg"
+
+print(alpha[1:3])
+print(alpha[3:])
+print(alpha[:3])
+print(alpha[3:-2])
+print(alpha[-3:4])
+print(alpha[::2])
+print(alpha[1::2])
