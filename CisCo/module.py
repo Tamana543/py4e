@@ -82,3 +82,28 @@ print(alpha[3:-2])
 print(alpha[-3:4])
 print(alpha[::2])
 print(alpha[1::2])
+
+#  min() - Example 1:
+print(min("aAbByYzZ"))
+
+
+#  min() - Examples 2 & 3:
+t = 'The Knights Who Say "Ni!"'
+print('[' + min(t) + ']')
+
+t = [0, 1, 2]
+print(min(t))
+#  max() - Example 1:
+print(max("aAbByYzZ"))
+
+
+# max() 
+t = 'The Knights Who Say "Ni!"'
+print('[' + max(t) + ']')
+
+t = [0, 1, 2]
+print(max(t))
+
+print("aAbByYzZaA".index("b"))
+print("aAbByYzZaA".index("Z"))
+print("aAbByYzZaA".index("A"))
