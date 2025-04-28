@@ -37,6 +37,9 @@ if __name__ == "__main__":
   print(suml(my_list) == 15)
   print(prodl(my_list) == 120)
 
+
+#STRINGS   
+
 string ='''Hello
 Word
 I am 
@@ -107,3 +110,6 @@ print(max(t))
 print("aAbByYzZaA".index("b"))
 print("aAbByYzZaA".index("Z"))
 print("aAbByYzZaA".index("A"))
+print(list("abcabc"))
+print("abcabc".count("b"))
+print('abcabc'.count("d"))
