@@ -148,3 +148,17 @@ print('moooo'.islower())
 #isspace() method:
 print(' \n '.isspace())
 print(" ".isspace())
+#isspace() method:
+print(' \n '.isspace())
+print(" ".isspace())
+
+#replace() method:
+print("www.netacad.com".replace("netacad.com", "pythoninstitute.org"))
+
+#split() method:
+print("phi       chi\npsi".split())
+
+#strip() method:
+print("[" + "   aleph   ".strip() + "]")
+
+'alpha' < 'alphabet'
