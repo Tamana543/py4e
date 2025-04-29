@@ -113,3 +113,38 @@ print("aAbByYzZaA".index("A"))
 print(list("abcabc"))
 print("abcabc".count("b"))
 print('abcabc'.count("d"))
+
+# center() method:
+print('[' + 'alpha'.center(10) + ']')
+print('[' + 'alpha'.center(10,'^') + ']')
+# find method
+the_text = """A variation of the ordinary lorem ipsum
+text has been used in typesetting since the 1960s 
+or earlier, when it was popularized by advertisements 
+for Letraset transfer sheets. It was introduced to 
+the Information Age in the mid-1980s by the Aldus Corporation, 
+which employed it in graphics and word-processing templates
+for its desktop publishing program PageMaker (from Wikipedia)"""
+
+fnd = the_text.find('the')
+while fnd != -1:
+    print(fnd)
+    fnd = the_text.find('the', fnd + 1)
+    
+#isalnum() method:
+print('lambda30'.isalnum())
+print('lambda'.isalnum())
+print('30'.isalnum())
+print('@'.isalnum())
+
+#isapha() method:
+print("Moooo".isalpha())
+print('Mu40'.isalpha())
+
+#islower() method:
+print("Moooo".islower())
+print('moooo'.islower())
+
+#isspace() method:
+print(' \n '.isspace())
+print(" ".isspace())
