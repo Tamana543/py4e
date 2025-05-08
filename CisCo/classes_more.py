@@ -127,3 +127,24 @@ print(obj.variable_1, obj.var_1, obj.fun_1())
 print(obj.variable_2, obj.var_2, obj.fun_2())
 print(obj.variable_3, obj.var_3, obj.fun_3())
     
+import time
+
+class TrackedVehicle:
+    def control_track(left, stop):
+        pass
+
+    def turn(left):
+        control_track(left, True)
+        time.sleep(0.25)
+        control_track(left, False)
+
+
+class WheeledVehicle:
+    def turn_front_wheels(left, on):
+        pass
+
+    def turn(left):
+        turn_front_wheels(left, True)
+        time.sleep(0.25)
+        turn_front_wheels(left, False)
+    
