@@ -381,7 +381,7 @@ print(data)
 print(filtered)
 
 
-## Look for inner and outer func :  inner() may be invoked only from within outer(). We can say that inner() is outer()'s private tool – no other part of the code can access it.
+## Look for inner and outer func :  inner() may be invoked only from within outer(). We can say that inner() is outer()'s private tool – no other part of the code can access it. (the Style Guide for Python Code, recommends that lambdas should not be assigned to variables, but rather they should be defined as functions.)
 def outer(par):
     loc = par
 
@@ -408,4 +408,24 @@ fcub = make_closure(3)
 
 for i in range(5):
     print(i, fsqr(i), fcub(i))
-    
+
+class Vowels:
+    def __init__(self):
+        self.vow = "aeiouy " # Yes, we know that y is not always considered a vowel.
+        self.pos = 0
+ 
+    def __iter__(self):
+        return self
+ 
+    def __next__(self):
+        if self.pos == len(self.vow):
+            raise StopIteration
+        self.pos += 1
+        return self.vow[self.pos - 1]
+ 
+ 
+vowels = Vowels()
+for v in vowels:
+    print(v, end=' ')
+ 
+ 
