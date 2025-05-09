@@ -332,3 +332,30 @@ print()
 for v in the_generator:
     print(v, end=". ")
 print()
+
+# Lambada Function (like arrow function in JS)
+one = lambda : 2
+two = lambda x : x* x
+third = lambda x,y : x ** y 
+
+for a in range(2,4) :
+    print(two(1))
+    print(third(a, two(2)))
+
+def print_function(args, fun):
+    for x in args:
+        print('f(', x,')=', fun(x), sep='')
+
+
+def poly(x):
+    return 2 * x**2 - 4 * x + 2
+
+
+print_function([x for x in range(-2, 3)], poly)
+print("Orrrrrrrrrrrrrr")
+# Or you can do it with lembda 
+def print_function(args, fun):
+    for x in args:
+        print('f(', x,')=', fun(x), sep='')
+ 
+print_function([x for x in range(-2, 3)], lambda x: 2 * x**2 - 4 * x + 2)
