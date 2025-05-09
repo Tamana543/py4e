@@ -305,7 +305,30 @@ def powers_of_2(n):
     for i in range(n):
         yield power
         power *= 2
- 
- 
+
 for v in powers_of_2(8):
     print(v)
+
+def fibonacci(n):
+    p = pp = 1
+    for i in range(n):
+        if i in [0, 1]:
+            yield 1
+        else:
+            n = p + pp
+            pp, p = p, n
+            yield n
+ 
+fibs = list(fibonacci(10))
+print(fibs)
+
+the_list = [1 if x % 2 == 0 else 0 for x in range(10)]
+the_generator = (1 if x % 2 == 0 else 0 for x in range(10))
+ 
+for v in the_list:
+    print(v, end=" ,")
+print()
+ 
+for v in the_generator:
+    print(v, end=". ")
+print()
