@@ -286,7 +286,26 @@ class Fib:
         ret = self.__p1 + self.__p2
         self.__p1, self.__p2 = self.__p2, ret
         return ret
+class Class:
+    def __init__(self, n):
+        self.__iter = Fib(n)
+
+    def __iter__(self):
+        print("Class iter")
+        return self.__iter
+
+# There is one important limitation: such a function should not be invoked explicitly as – in fact – it isn't a function anymore; it's a generator object.
+object = Class(8)
 
 
 for i in Fib(10):
     print(i)
+def powers_of_2(n):
+    power = 1
+    for i in range(n):
+        yield power
+        power *= 2
+ 
+ 
+for v in powers_of_2(8):
+    print(v)
