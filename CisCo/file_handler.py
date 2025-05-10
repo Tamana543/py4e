@@ -64,4 +64,28 @@ for i in range(len(data)):
     data[i] = 10-i 
 for b in data :
     print(hex(b))
+
+# Readint : to read data from Binarry file 
+data = bytearray(10)
+try :
+    binary_file = open('textfile.txt','rb')
+    binary_file.readinto(data)
+    binary_file.close()
+    for byte in data:
+        print(hex(byte),end=" ")
+except IOError as error :
+    print("I/O error occured :" , strerror(error.errno))
+
+# or the same task by using read() : Be careful – don't use this kind of read if you're not sure whether the file's contents will fit the available memory.
+try:
+    binary_file = open('file.bin', 'rb')
+    data = bytearray(binary_file.read())
+    binary_file.close()
+
+    for b in data:
+        print(hex(b), end=' ')
+
+except IOError as e:
+    print("I/O error occurred:", strerror(e.errno))
+
     
