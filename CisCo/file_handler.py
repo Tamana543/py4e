@@ -163,4 +163,20 @@ try:
 except IOError as e:
     print("I/O error occurred: ", strerror(e.errno))
 
-        
+# Evaluating Student Result ( complete App ) 
+class  StudentDataException(Exception) :
+    pass
+
+class WrongLine(StudentDataException):
+    def __init__(self, line_number, line_string):
+        super().__init__(self)
+        self.line_number = line_number
+        self.line_string = line_string
+     
+#empty file 
+class FileEmpty(StudentDataException) :
+    def __init__(self):
+        super().__init__(self) 
+
+# student data dic 
+data = {}    
