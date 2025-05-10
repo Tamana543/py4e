@@ -190,7 +190,7 @@ try :
     if len(lines == 0 ):
         raise FileEmpty()
      #scanning 
-     for i in range (len(lines)) :
+    for i in range (len(lines)) :
         line = lines[i]
         # columns 
         columns = line.split()
@@ -198,6 +198,29 @@ try :
             raise WrongLine(i+1 , line)
         #the key hundler 
         student = columns[0]+''+columns[1]
-        
+
+        # Ponint Hundler 
+        try :
+            points = float(columns[2])
+        except ValueError :
+            raise WrongLine(i + 1, line)
+        # Update dictionary.
+        try:
+            data[student] += points
+        except KeyError:
+            data[student] = points
+    # Print results.
+    for student in sorted(data.keys()):
+        print(student,'\t', data[student])
+
+except IOError as e:
+    print("I/O error occurred: ", strerror(e.errno))
+except WrongLine as e:
+    print("Wrong line #" + str(e.line_number) + " in source file:" + e.line_string)
+except FileEmpty:
+    print("Source file empty")
+
+ 
+
      
         
