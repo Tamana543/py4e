@@ -48,3 +48,20 @@ try:
     print("Lines in file:     ", lcnt)
 except IOError as e:
     print("I/O error occurred:", strerror(e.errno))
+
+print("Write Methood ")
+try:
+    file = open('file.txt','wt')
+    for item in range(10):
+        file.write("line #" + str(item + 1) + "\n")
+    file.close()
+except IOError as e :
+     print("I/O error occurred: ", strerror(e.errno))
+
+# Handling Bytearrays 
+data = bytearray(10)
+for i in range(len(data)):
+    data[i] = 10-i 
+for b in data :
+    print(hex(b))
+    
