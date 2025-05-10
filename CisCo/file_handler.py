@@ -89,3 +89,34 @@ except IOError as e:
     print("I/O error occurred:", strerror(e.errno))
 
     
+# A file hundler complete applicataion 
+srcname = input("Enter the source file name :")
+try :
+    src = open(srcname, "rb")
+except IOError as error :
+    print("Cannot open the source file: ", strerror(error.errno))
+    exit(error.errno)
+
+dstname  = input("Enter the destination file name :")
+try: 
+    dst = open(dstname, 'wb')
+except Exception as error :
+    print("Cannot create the destination file: ", strerror(error.errno))
+    src.close()
+    exit(error.errno)
+
+buffer = bytearray(65536)
+total =0 
+try :
+    readin = src.readinto(buffer)
+    while readin > 0 :
+        written = dst.write(buffer[:readin])
+        total += written
+        readin = src.readinto(buffer)
+except IOError as e:
+    print("Cannot create the destination file: ", strerror(e.errno))
+    exit(e.errno)	
+
+print(total,'byte(s) successfully written')
+src.close()
+dst.close()	
