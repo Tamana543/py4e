@@ -179,4 +179,25 @@ class FileEmpty(StudentDataException) :
         super().__init__(self) 
 
 # student data dic 
-data = {}    
+data = {}  
+
+file_nameStu = input("Enter student's data filename: ")
+line_number = 1
+try :
+    f = open(file_nameStu , 'rt')
+    lines = f.readlines()
+    f.close()
+    if len(lines == 0 ):
+        raise FileEmpty()
+     #scanning 
+     for i in range (len(lines)) :
+        line = lines[i]
+        # columns 
+        columns = line.split()
+        if len(columns) != 3 :
+            raise WrongLine(i+1 , line)
+        #the key hundler 
+        student = columns[0]+''+columns[1]
+        
+     
+        
