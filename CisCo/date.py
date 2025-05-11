@@ -1,4 +1,5 @@
 from datetime import date
+from datetime import datetime
 from datetime import time as t
 import time
 
@@ -46,13 +47,23 @@ class Break :
 
 student = Break()
 # student.take_nap(5)
+
 def structTime() :
      #time.struct_time:{tm_year   # Specifies the year. ,tm_mon    # Specifies the month (value from 1 to 12) ,tm_mday   # Specifies the day of the month (value from 1 to 31) ,tm_hour   # Specifies the hour (value from 0 to 23) ,tm_min    # Specifies the minute (value from 0 to 59) ,tm_sec    # Specifies the second (value from 0 to 61 ) ,tm_wday    # Specifies the weekday (value from 0 to 6) ,tm_yday   # Specifies the year day (value from 1 to 366) ,tm_isdst  # Specifies whether daylight saving time applies (1 – yes, 0 – no, -1 – it isn't known) ,tm_zone   # Specifies the timezone name (value in an abbreviated form) ,tm_gmtoff # Specifies the offset east of UTC (value in seconds)}
     timestamp = time.time()
     st = time.gmtime(timestamp)
+    dataTime = datetime(2004,3,21)
     print(time.gmtime(timestamp))
     print(time.localtime(timestamp))
     print(time.asctime(st))
     print(time.mktime((2004, 11, 4, 14, 53, 0, 0, 308, 0))) # the number of seconds since the Unix epoch
+    print("today:", datetime.today())
+    print("now:", datetime.now())
+    print("utcnow:", datetime.utcnow())
+    print("Timestamp: ",dataTime.timestamp()) # to change a given date to a timestamp
 
-structTime()
+# structTime()
+def third():
+     d = date(2020, 1, 4)
+     print(d.strftime('%Y/%m/%d')) # to reFormat date
+third()
