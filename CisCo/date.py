@@ -83,4 +83,18 @@ def timeDelta():
      print("Days:", delta.days)
      print("Seconds:", delta.seconds)
      print("Microseconds:", delta.microseconds)
+     delta2 = delta * 2
+     print(delta2)
+     d = date(2019, 10, 4) + delta2
+     print(d)
+     dt = datetime(2019, 10, 4, 14, 53) + delta2
+     print(dt)
+     my_date = datetime(2020, 11, 4, 14, 53)
+     print(my_date.strftime("%Y/%m/%d %H:%M:%S"))
+     print(my_date.strftime("%y/%B/%d %H:%M:%S %p"))
+     print(my_date.strftime("%a, %Y %b %d"))
+     print(my_date.strftime("%A, %Y %B %d"))
+     print(my_date.strftime("Weekday: %w"))
+     print(my_date.strftime("Day of the year: %j"))
+     print(my_date.strftime("Week number of the year: %W"))
 timeDelta()
