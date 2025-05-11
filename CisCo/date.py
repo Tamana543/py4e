@@ -1,6 +1,7 @@
 from datetime import date
 from datetime import datetime
 from datetime import time as t
+from datetime import timedelta
 import time
 
 def firstPrac() : 
@@ -65,5 +66,21 @@ def structTime() :
 # structTime()
 def third():
      d = date(2020, 1, 4)
-     print(d.strftime('%Y/%m/%d')) # to reFormat date
+     print(d.strftime('%Y;%m;%d')) # to reFormat date
+     # strptime function in datetime and time 
+     print(datetime.strptime("2019/11/04 14:53:00", "%Y/%m/%d %H:%M:%S")) 
+     print(time.strptime("2019/11/04 14:53:00", "%Y/%m/%d %H:%M:%S"))
+     # time as number 
+     d1 = date(2025, 11, 4)
+     d2 = date(2004, 11, 4)
+     print(d1 - d2) # timedelta
+     dt1 = datetime(2020, 11, 4, 0, 0, 0)
+     dt2 = datetime(2019, 11, 4, 14, 53, 0)
+     print(dt1 - dt2)
 third()
+def timeDelta():
+     delta = timedelta(weeks=3, days=4, hours=3)
+     print("Days:", delta.days)
+     print("Seconds:", delta.seconds)
+     print("Microseconds:", delta.microseconds)
+timeDelta()
