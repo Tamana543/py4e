@@ -109,4 +109,15 @@ def first_calendar() :
      calendar.prmonth(2025,11)
      print(calendar.weekday(2025,5,12)) # it print 0 because in calnder madule the first day of the week (Monday) is 0
      print(calendar.weekheader(5))
+     print(calendar.isleap(2020))
+     print(calendar.leapdays(2020, 2021))  # Up to but not including 2021.
+     c = calendar.Calendar(calendar.SUNDAY)
+     for weekday in c.iterweekdays():
+      print(weekday, end=", ")
 first_calendar()
+def delinder(data): 
+    c = calendar.Calendar()
+    for data in c.monthdays2calendar(2020, 12):
+          print(data)
+
+# LAb Test
