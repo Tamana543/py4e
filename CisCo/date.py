@@ -3,6 +3,7 @@ from datetime import datetime
 from datetime import time as t
 from datetime import timedelta
 import time
+import calendar
 
 def firstPrac() : 
      today = date.today()
@@ -77,7 +78,7 @@ def third():
      dt1 = datetime(2020, 11, 4, 0, 0, 0)
      dt2 = datetime(2019, 11, 4, 14, 53, 0)
      print(dt1 - dt2)
-third()
+# third()
 def timeDelta():
      delta = timedelta(weeks=3, days=4, hours=3)
      print("Days:", delta.days)
@@ -97,4 +98,15 @@ def timeDelta():
      print(my_date.strftime("Weekday: %w"))
      print(my_date.strftime("Day of the year: %j"))
      print(my_date.strftime("Week number of the year: %W"))
-timeDelta()
+# timeDelta()
+
+# Calender Realated Functions 
+def first_calendar() :
+     print(calendar.calendar(2025,3))
+     print("_________________________")
+     print(calendar.calendar(2025))
+     calendar.setfirstweekday(calendar.SATURDAY)
+     calendar.prmonth(2025,11)
+     print(calendar.weekday(2025,5,12)) # it print 0 because in calnder madule the first day of the week (Monday) is 0
+     print(calendar.weekheader(5))
+first_calendar()
